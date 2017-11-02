@@ -1,0 +1,25 @@
+name: Coordinates
+main: Syams255\Loader
+version: 1.0.0[S225]
+api: [3.0.0-ALPHA7, 3.0.0-ALPHA8, 3.0.0-ALPHA]
+load: STARTUP
+author: Syams255[S255]
+description: Shows player their coordinates.
+website: https://github.com/Syams225/Coordinate
+commands:
+ getpos:
+  description: Gets the user's current coordinates and level name
+  usage: /getpos
+  permission: coordinates.command.getpos
+permissions:
+ coordinates:
+  default: op
+  description: Allows access to all Coordinates features
+  children:
+   coordinates.command:
+    default: op
+    description: Allows use of all Coordinates commands
+    children:
+     coordinates.command.getpos:
+      default: true
+      description: Allows use of /getpos
